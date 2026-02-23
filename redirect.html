@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://drive.google.com/file/d/1MnN6QGEAu_s07hEwRf8MEvLLSPkph9nY/view?usp=sharing" />
-  </head>
-  <body>
-    Redirigiendo...
-  </body>
+<head>
+  <script>
+    fetch('./data.json')
+      .then(r => r.json())
+      .then(data => {
+        window.location.replace(data.redirect);
+      });
+  </script>
+</head>
+<body>
+Redirigiendo...
+</body>
 </html>
